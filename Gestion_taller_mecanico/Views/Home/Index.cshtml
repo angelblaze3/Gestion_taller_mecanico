@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h3 mb-1">Panel principal</h1>
+        <p class="text-muted mb-0">Resumen del día en el taller</p>
+    </div>
+    <span class="badge bg-light text-dark border fs-6 mt-2 mt-md-0">@DateTime.Now.ToString("dddd, dd 'de' MMMM yyyy")</span>
+</div>
+
+<!-- Indicadores -->
+<div class="row g-3 mb-4">
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card kpi-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <p class="text-muted small mb-1">Clientes registrados</p>
+                <p class="display-6 fw-semibold mb-0">@ViewData["TotalClientes"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card kpi-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <p class="text-muted small mb-1">Vehículos en taller</p>
+                <p class="display-6 fw-semibold mb-0">@ViewData["VehiculosEnTaller"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card kpi-card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <p class="text-muted small mb-1">Órdenes abiertas</p>
+                <p class="display-6 fw-semibold mb-0">@ViewData["OrdenesAbiertas"]</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-xl-3">
+        <div class="card kpi-card kpi-alerta h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <p class="text-muted small mb-1">Refacciones con stock bajo</p>
+                <p class="display-6 fw-semibold mb-0">@ViewData["RefaccionesBajoStock"]</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Módulos -->
+<h2 class="h5 mb-3">Módulos</h2>
+
+
+
+</div>

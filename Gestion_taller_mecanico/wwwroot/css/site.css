@@ -1,0 +1,51 @@
+:root {
+    --taller-primario: #1f3a5f;
+    --taller-acento: #f29f05;
+}
+
+body {
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Barra superior */
+.taller-navbar {
+    background-color: var(--taller-primario);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+    .taller-navbar .nav-link {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+    }
+
+        .taller-navbar .nav-link:hover,
+        .taller-navbar .nav-link:focus {
+            color: #ffffff;
+        }
+
+/* Tarjetas de indicadores */
+.kpi-card {
+    border-left: 4px solid var(--taller-primario) !important;
+}
+
+    .kpi-card.kpi-alerta {
+        border-left-color: var(--taller-acento) !important;
+    }
+
+/* Tarjetas de módulos */
+.modulo-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    color: inherit;
+}
+
+    .modulo-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+    }
